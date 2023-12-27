@@ -1,0 +1,605 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; /* Tambahkan properti align-items */
+    width: 100%; /* Ubah lebar tombol menjadi 100% */
+    height: 5rem;
+    background-color: rgb(255, 247, 3);
+    border: .2rem solid var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem; /* Ubah jarak antar huruf */
+    color: #24252a;
+    border-radius: 0.6rem; /* Tambahkan border-radius */
+    cursor: pointer; /* Ubah kursor menjadi pointer saat dihover */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang saat dihover */
+  }
+  
+  .btn-box .btn:hover {
+    background-color: #ff8c00; /* Warna latar belakang saat dihover */
+    color: #fff; /* Warna teks saat dihover */
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+  }
+  
+  .menu-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .mobile-nav {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mobile-nav li {
+    padding: 15px;
+  }
+  :root {
+    --text-color:#ededed;
+    --main-color:#EE9322;
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(27, 41, 115, 0.9);
+    z-index: 2; 
+}
+
+
+  section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  background: url(../assets/me.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+  transition: background-size 0.5s; 
+}
+
+.home.header-scrolled {
+  background-size: 120%; 
+}
+
+
+.container { 
+    max-width: 60rem;
+}
+.container .text-slider-items {
+  display: none;
+}
+.container h1 {
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.container .animasi-text {
+    position: relative;
+    width: 32.8rem;
+}
+
+.container h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1.3px white;
+}
+
+.container p {
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  font-size: 2rem;
+  margin: 2rem 0 4rem;
+}
+
+.home-sci {
+
+  bottom: 4rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+  
+  .logo {
+    cursor: pointer;
+  }
+
+  .logo img {
+    width: 170px;
+  }
+  
+  .nav a,
+  .menu,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav li {
+    padding: 0px 20px;
+  }
+  
+
+.nav li a {
+  transition: transform 1s ease;
+}
+
+.nav li a:hover {
+  transform: scale(1.1);
+}
+
+  .nav li a:hover {
+    color: #c0ff03;
+  }
+  
+  .menu {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .menu:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  
+  /* Mobile Nav */
+  
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #0088a9;
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  header.header-scrolled {
+    background-color: rgba(36, 37, 42, 0.9);
+}
+
+/* Tambahkan animasi hover pada menu */
+.nav li a:hover {
+    color: #0088a9;
+    transform: scale(1.1);
+}
+
+.about {
+  height: 100vh; /* Mengatur tinggi elemen .about menjadi 100vh (tinggi viewport) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 6rem;
+  background: url(https://gifdb.com/images/high/retro-pixel-landscape-background-0g0dpo6tlg0pbmfp.gif);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+}
+
+.about h2, h3, p {
+  color: white;
+}
+
+.heading {
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+span {
+  color: black;
+}
+
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 50%;
+  border-radius: 50%;
+  border: .2rem solid white;
+}
+
+.about-content {
+  text-align: center;
+}
+.about-content p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  animation: moveText 3s linear infinite; /* Tambahkan animasi bergerak */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(0); /* Posisi awal */
+  }
+  50% {
+    transform: translateX(10px); /* Posisi tengah */
+  }
+  100% {
+    transform: translateX(0); /* Kembali ke posisi awal */
+  }
+}
+
+.about-content h3{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.about-content p{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.skills {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: auto;
+  padding-bottom: 5rem;
+  background: url(https://media.tenor.com/9vRAkntogEMAAAAd/background.gif);
+  background-size: cover; /* Mengatur latar belakang untuk menutupi seluruh elemen */
+  background-position: center; /* Mengatur posisi latar belakang ke tengah elemen */
+}
+
+
+.skills .skills-row {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills-row .skills-column {
+  flex: 1 1 30rem;
+}
+
+.skills-column .tittle {
+  font-size: 2rem;
+  margin: 0 0 1.5rem;
+}
+
+.skills-box .skills-content {
+  border: .2rem solid white;
+  border-radius: .5rem 1rem;
+  padding: .5rem 1.5rem;
+  z-index: 1;
+}
+
+
+.skills-content .progress {
+  padding: 1rem 0;
+}
+
+.skills-content .progress h3 {
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-content .progress h3 span {
+  color: rgb(255, 255, 255);
+}
+
+.skills-content .progress .bar {
+  height: 2.5rem;
+  border-radius: .6rem;
+  border: .2rem solid blue;
+  padding: .5rem;
+  margin: 1rem 0;
+}
+
+.skills-content .progress .bar span {
+  display: block;
+  height: 100%;
+  border-radius: 3rem;
+  background: red;
+}
+
+
+
+
+.education h2 {
+  padding-bottom: 3rem;
+}
+
+.education {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 10rem;
+  background: url(https://media1.giphy.com/media/326d5iOUoYY8N6uFPm/giphy.gif);
+  background-size: cover; 
+  background-attachment: fixed; 
+}
+
+
+.education .education-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+ }
+
+ .education .education-column {
+  flex: 1 1 30rem;
+ }
+
+ .education-column .tittle {
+  font-size: 2.5rem;
+  margin: 0 0 1.5rem 2rem;
+ }
+
+ .education-column .education-box{
+  border-left: .2rem solid var(--text-color);
+ }
+
+ .education-box .education-content {
+  padding-left: 2rem; 
+ }
+
+ .education-content .content {
+  padding: 1.5rem;
+  border: .2rem solid white;
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+ }
+
+ .education-content .content .year {
+  padding-bottom: 2px;
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+ }
+
+ .education-content .content .year i {
+  padding-right: .5rem;
+ }
+
+ .education-content .content h3{
+  font-size: 28px;
+ }
+
+ .education-content .content p{
+  font-size: 20px;
+  padding-top: .5rem;
+  font-weight: 450;
+ }
+
+ .contact {
+  background: url(https://gifdb.com/images/high/light-trails-wave-background-r4tz04b0l8kqi6do.gif);
+  min-height: auto;
+  padding-bottom: 5rem;
+  background-size: cover; /* Mengatur latar belakang untuk menutupi seluruh elemen */
+  background-position: center; /* Mengatur posisi latar belakang ke tengah elemen */
+}
+
+.contact form{
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact form .input-box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field{
+  width: 49%;
+  margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input,
+.contact form .textarea-field textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: black;
+  background: transparent;
+  border-radius: .6rem;
+  border: .2rem solid var(--text-color);
+}
+
+  /* Add this CSS code at the end of your existing CSS */
+
+/* Mobile Styles */
+@media only screen and (max-width: 800px) {
+  /* Navigation Menu Styles */
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav li {
+    padding: 10px 0;
+  }
+
+  /* Update the .menu style for smaller screens */
+  .menu {
+    display: initial;
+  }
+
+  /* Header Styles for Smaller Screens */
+  header {
+    padding: 20px 5%;
+  }
+
+  /* Update your section padding for smaller screens */
+  section {
+    padding: 5rem 5%;
+  }
+
+  /* Style for text bars and other elements */
+  .container h1 {
+    font-size: 2rem; /* Reduce font size for the heading */
+  }
+
+  .text-slider-items {
+    display: block; /* Show text-slider-items on mobile */
+  }
+
+  .text-slider {
+    font-size: 1.5rem; /* Reduce font size for the animated text */
+  }
+
+  /* Update the style of the text bars in the skills section */
+  .skills-content .progress h3 {
+    font-size: 1.2rem;
+  }
+
+  .skills-content .progress .bar {
+    height: 1.5rem;
+  }
+
+  .skills-content .progress .bar span {
+    height: 100%;
+  }
+
+  /* Adjust the style of the contact form elements */
+  .contact form .input-box .input-field input,
+  .contact form .textarea-field textarea {
+    padding: 1rem; /* Reduce padding for input fields */
+    font-size: 1rem; /* Reduce font size for input fields */
+  }
+  .mobile-menu {
+    display: flex;
+  }
+
+  .menu-content {
+    display: block;
+  }
+}
+
+/* Add any additional mobile-specific styles as needed */
+
+
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav,
+    .menu {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+  
